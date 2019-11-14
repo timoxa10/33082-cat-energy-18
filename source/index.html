@@ -3,23 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <a class="main-nav__logo logo">
-          <img class="logo__logo-image" src="https://via.placeholder.com/139x157" width="210" height="40" alt="Кэт энерджи">
+          <img class="logo__logo-image" src="img/logo-mobile.svg" width="210" height="40" alt="Кэт энерджи">
         </a>
         <ul class="main-nav__list nav-list">
           <li class="nav-list__item">
-            <a>Главная</a>
+            <a class="nav-list__link">Главная</a>
           </li>
           <li class="nav-list__item">
-            <a href="catalog.html">Каталог продукции</a>
+            <a class="nav-list__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="nav-list__item">
-            <a href="form.html">Подбор программы</a>
+            <a class="nav-list__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -27,8 +28,8 @@
         <section class="choose-program">
           <h2 class="choose-program__title">Функциональное питание для котов</h2>
           <p class="choose-program__intro">Занялся собой? Займись котом!</p>
-          <img class="choose-program__image" src="https://via.placeholder.com/280x271" width="280" height="271" alt="Функциональное питание">
-          <a class="choose-program__button button" href="form.html">Подобрать программу</a>
+          <img class="choose-program__image" src="img/index-can-mobile@1x.png" width="280" height="271" alt="Функциональное питание">
+          <a class="choose-program__button button button--green" href="form.html">Подобрать программу</a>
         </section>
       </div>
     </header>
@@ -36,53 +37,52 @@
       <h1 class="visually-hidden">Кэт энерджи – функциональное питание для котов</h1>
       <div class="programs-wrapper">
         <section class="programs">
-          <h2 class="visually-hidden">Наши программы</h2>
-          <ul>
+          <ul class="programs__list">
             <li class="programs__item program-item">
               <div class="program-item__title">
-                <img class="program-item__image" src="https://via.placeholder.com/60x60" width="60" height="60" alt="Программа похудение">
+                <img class="program-item__image" src="img/icon-cat-slim.svg" width="60" height="60" alt="Программа похудение">
                 <h3 class="program-item__subtitle">Похудение</h3>
               </div>
-              <p class="program-item__desc">
+              <p class="program-item__desc paragraph-medium">
                 Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
               </p>
-              <a class="program-item__button button" href="#">Каталог Slim</a>
+              <a class="program-item__button" href="#">Каталог Slim</a>
             </li>
             <li class="programs__item program-item">
               <div class="program-item__title">
-                <img class="program-item__image" src="https://via.placeholder.com/60x60" width="60" height="60" alt="Программа похудение">
+                <img class="program-item__image" src="img/icon-cat-pro.svg" width="60" height="60" alt="Программа похудение">
                 <h3 class="program-item__subtitle">Набор массы</h3>
               </div>
-              <p class="program-item__desc">
+              <p class="program-item__desc paragraph-medium">
                 Заработать авторитет среди дворовых котов и даже собак?
                 Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
               </p>
-              <a class="program-item__button button" href="#">Каталог Pro</a>
+              <a class="program-item__button" href="#">Каталог Pro</a>
             </li>
           </ul>
         </section>
       </div>
       <div class="advantages-wrapper">
         <section class="advantages">
-          <h2 class="advantages__title">Как это работает</h2>
+          <h2 class="advantages__title title-large">Как это работает</h2>
           <ul class="advantages__list">
             <li class="advantages__item">
-              <p class="advantages__desc">
+              <p class="advantages__desc paragraph-medium">
                 Функциональное питание содержит только полезные питательные вещества.
               </p>
             </li>
             <li class="advantages__item">
-              <p class="advantages__desc">
+              <p class="advantages__desc paragraph-medium">
                 Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
               </p>
             </li>
             <li class="advantages__item">
-              <p class="advantages__desc">
+              <p class="advantages__desc paragraph-medium">
                 Замените один-два приема обычной еды на наше функциональное питание.
               </p>
             </li>
             <li class="advantages__item">
-              <p class="advantages__desc">
+              <p class="advantages__desc paragraph-medium">
                 Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
               </p>
             </li>
@@ -92,7 +92,7 @@
     </main>
     <footer class="page-footer">
       <a class="page-footer__logo logo">
-        <img class="logo__logo-image" src="https://via.placeholder.com/139x157" width="210" height="40" alt="Кэт энерджи">
+        <img class="logo__logo-image" src="img/logo-footer.svg" width="210" height="40" alt="Кэт энерджи">
       </a>
       <div class="page-footer__social social">
         <ul class="social__list">
@@ -109,7 +109,7 @@
       </div>
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">HTML Academy:</p>
-        <a class="copyright__link button" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
   </body>
