@@ -1,76 +1,18 @@
-@font-face {
-  font-family: "Oswald Regular";
-  src: url("/fonts/oswaldregular.woff2") format("woff2"),
-    url("/fonts/oswaldregular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Oswald Medium";
-  src: url("/fonts/oswaldmedium.woff2") format("woff2"),
-    url("/fonts/oswaldmedium.woff") format("woff");
-}
-
+@import "fonts.less";
+@import "globals.less";
+@import "helpers.less";
 @import "mixins.less";
-@import "main-nav.less";
-@import "programs.less";
-@import "advantages.less";
-@import "footer.less";
-@import "catalog.less";
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.reset-list {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.reset-decoration {
-  text-decoration: none;
-}
-
-.title-large {
-  .text-options(36px; @black; 60px; none;);
-}
-
-.paragraph-medium {
-  font-family: "Arial", "Oswald Regular", sans-serif;
-  .text-options(14px; @grey; 18px; none;);
-}
-
-.button {
-  display: block;
-  .set-padding(14px; 74px; 11px; 11px;);
-  .text-options(14px; @white; 18px; uppercase;);
-  .reset-decoration;
-}
-
-.button--green {
-  background-color: @green;
-}
-
-.button--grey {
-  background-color: #f2f2f2;
-  color: @grey;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Oswald Regular", "Arial", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 24px;
-  color: @grey;
-  background-color: @white;
-}
+@import "style.less";
+@import "variable.less";
+@import "blocks/advantages.less";
+@import "blocks/button.less";
+@import "blocks/catalog.less";
+@import "blocks/choose-program.less";
+@import "blocks/copyright.less";
+@import "blocks/logo.less";
+@import "blocks/nav-list.less";
+@import "blocks/paragraph-medium.less";
+@import "blocks/program-item.less";
+@import "blocks/show-more.less";
+@import "blocks/social.less";
+@import "blocks/title-large.less";
