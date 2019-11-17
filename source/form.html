@@ -3,26 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <a href="index.html" class="main-nav__logo logo">
-          <img class="logo__logo-image" src="img/logo-mobile.svg" width="210" height="40" alt="Кэт энерджи">
-        </a>
-        <ul class="main-nav__list nav-list">
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link">Подбор программы</a>
-          </li>
-        </ul>
+        <button class="main-nav__toggle visually-hidden" type="button">Открыть меню</button>
+        <div class="container main-nav__wrapper">
+          <a class="main-nav__logo logo" href="index.html">
+            <img class="logo__logo-image" src="img/logo-mobile.svg" width="210" height="40" alt="Кэт энерджи">
+          </a>
+          <ul class="main-nav__list nav-list">
+            <li class="nav-list__item" href="index.html">
+              <a class="nav-list__link">Главная</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <footer class="page-footer">
