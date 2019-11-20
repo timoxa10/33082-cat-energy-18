@@ -1,0 +1,35 @@
+.page-footer {
+  background-color: @light-grey;
+  padding-top: 39px;
+  padding-bottom: 22px;
+}
+
+.page-footer-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer__logo {
+  width: 210px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-footer__logo {
+    width: 135px;
+    margin: 0;
+  }
+
+  .page-footer__social {
+    width: 150px;
+  }
+
+  .page-footer__copyright {
+    width: 165px;
+  }
+}

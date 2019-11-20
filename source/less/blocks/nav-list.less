@@ -1,5 +1,5 @@
 .nav-list {
-  .reset-list;
+  .reset-list();
 }
 
 .nav-list__link {
@@ -8,5 +8,12 @@
   padding-bottom: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   .text-options(20px; @black; 20px; uppercase; 500;);
-  .reset-decoration;
+  text-align: center;
+  .reset-decoration();
+}
+
+@media (min-width: @tablet-width) {
+  .nav-list {
+    display: flex;
+  }
 }
