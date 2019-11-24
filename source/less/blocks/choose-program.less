@@ -1,21 +1,120 @@
 .choose-program-wrapper {
-  background-color: #64a83b;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 100% 0;
+  background-size: contain;
+  margin-bottom: 20px;
 }
 
 .choose-program {
-  padding-top: 29px;
+  position: relative;
+  min-height: 480px;
+}
+
+.choose-program__text {
+  padding-top: 25px;
+  padding-bottom: 10px;
 }
 
 .choose-program__title {
   .text-options(36px; @white; 36px; none; 400;);
   text-align: center;
-  margin-bottom: 19px;
+  margin-top: 0;
+  margin-bottom: 28px;
 }
 
 .choose-program__intro {
   .text-options(14px; @white; 14px; uppercase; normal;);
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .choose-program-wrapper {
+    background: none;
+  }
+
+  .choose-program {
+    min-height: 840px;
+  }
+
+  .choose-program__text {
+    max-width: 510px;
+    min-height: 300px;
+    padding-left: 90px;
+    padding-top: 50px;
+  }
+
+  .choose-program__title {
+    .text-options(60px; @black; 60px; none; 400;);
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .choose-program__intro {
+    .text-options(20px; @black; 20px; uppercase; normal;);
+    text-align: left;
+    margin: 0;
+  }
+
+  .choose-program__button {
+    width: 245px;
+    position: absolute;
+    left: 90px;
+    top: 280px;
+  }
+
+  .choose-program__product {
+    position: absolute;
+    top: 240px;
+  }
+
+  .choose-program__image {
+    width: 710px;
+    height: 610px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .choose-program-wrapper {
+    margin-bottom: 85px;
+  }
+
+  .choose-program {
+    min-height: 645px;
+  }
+
+  .choose-program__text {
+    padding-left: 80px;
+    padding-top: 120px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 610px;
+      height: 780px;
+      background: @green;
+      top: -135px;
+      left: 610px;
+    }
+  }
+
+  .choose-program__title {
+    line-height: 65px;
+    margin-bottom: 45px;
+  }
+
+  .choose-program__button {
+    left: 80px;
+    top: 375px;
+  }
+
+  .choose-program__product {
+    top: 50px;
+    left: 470px;
+  }
+
+  .choose-program__image {
+    width: 555px;
+    height: 500px;
+  }
 }
