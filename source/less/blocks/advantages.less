@@ -1,11 +1,58 @@
+.advantages {
+  padding-top: 25px;
+}
+
 .advantages__list {
   .reset-list();
   display: flex;
   flex-direction: column;
 }
 
+.advantages__title {
+  margin-top: 20px;
+}
+
 .advantages__item {
+  position: relative;
   min-height: 60px;
+  margin-bottom: 20px;
+}
+
+.advantages__desc {
+  padding-left: 80px;
+}
+
+.advantages__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: @green;
+}
+
+.advantages__image--leaf {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("../img/advantage-leaf@1x.png");
+}
+
+.advantages__image--powder {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("../img/advantage-powder@1x.png");
+}
+
+.advantages__image--dining {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("../img/advantage-dining@1x.png");
+}
+
+.advantages__image--clock {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("../img/advantage-clock@1x.png");
 }
 
 @media (min-width: @tablet-width) {
@@ -13,17 +60,58 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    counter-reset: li;
+  }
+
+  .advantages__image {
+    width: 80px;
+    height: 80px;
+    top: 25px;
   }
 
   .advantages__item {
-    width: 325px;
+    width: 324px;
     min-height: 230px;
+    margin-bottom: 85px;
+
+    &::before {
+      content: counter(li);
+      counter-increment: li;
+      color: @light-grey;
+      font-size: 281px;
+      line-height: 281px;
+      text-transform: none;
+      position: absolute;
+      left: 115px;
+      top: -15px;
+    }
+  }
+
+  .advantages__desc {
+    max-width: 250px;
+    padding: 0;
+    position: absolute;
+    bottom: 25px;
+    z-index: 5;
   }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @desktop-width) {
+  .advantages {
+    padding-top: 70px;
+  }
+
   .advantages__item {
     width: 245px;
-    min-height: 225px;
+    min-height: 250px;
+    margin-bottom: 85px;
+  }
+
+  .advantages__image {
+    top: 35px;
+  }
+
+  .advantages__desc {
+    bottom: 20px;
   }
 }

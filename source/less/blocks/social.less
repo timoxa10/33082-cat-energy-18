@@ -1,5 +1,36 @@
 .social__list {
   .reset-list();
+  width: 160px;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.social__link {
+  width: 25px;
+  height: 20px;
+  background-color: @light-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .social__link {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social__link--vkontakte svg {
+    width: 30px;
+    height: 16px;
+  }
+
+  .social__link--instagram svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .social__link--facebook svg {
+    width: 14px;
+    height: 28px;
+  }
 }
