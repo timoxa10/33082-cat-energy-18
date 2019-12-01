@@ -1,0 +1,31 @@
+.title-small {
+  position: relative;
+  .text-options(24px; @black; 24px; none; 400;);
+}
+
+@media (min-width: @tablet-width) {
+  .title-small {
+    position: relative;
+    .text-options(36px; @black; 36px; none; 400;);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .title-small--stroked::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: -95px;
+    width: 55px;
+    border-bottom: 3px solid #68b738;
+  }
+
+  .title-small--stroked::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 370px;
+    width: 850px;
+    border-bottom: 3px solid #68b738;
+  }
+}

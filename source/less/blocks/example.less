@@ -1,0 +1,32 @@
+.example-wrapper {
+  background-color: @light-grey;
+  padding-bottom: 30px;
+}
+
+.example__title {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.example__intro {
+  padding-right: 20px;
+  margin-bottom: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .example-wrapper {
+    background-color: @white;
+  }
+
+  .example__title {
+    margin-bottom: 60px;
+  }
+
+  .example__calculation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 55px;
+    margin-bottom: 20px;
+  }
+}
