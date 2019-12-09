@@ -6,6 +6,10 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  @media (min-resolution: @retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
 }
 
 .gift__desc {
@@ -36,6 +40,10 @@
     background-size: 708px 200px, 100%;
     min-height: 200px;
     display: block;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   .gift__desc {
@@ -61,6 +69,10 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 
   .gift__desc {
