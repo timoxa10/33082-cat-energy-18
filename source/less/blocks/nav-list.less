@@ -18,6 +18,14 @@
   .text-options(20px; @black; 20px; uppercase; 500;);
   text-align: center;
   .reset-decoration();
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -71,6 +79,14 @@
 
   .nav-list__link--white {
     color: @white;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .nav-list__link--active-main::after {

@@ -12,6 +12,11 @@
   }
 }
 
+.gift__icon {
+  margin: 0 auto;
+  fill: @white;
+}
+
 .gift__desc {
   position: relative;
   width: 150px;
@@ -20,18 +25,6 @@
   text-align: center;
   margin: 0 auto;
   padding-bottom: 45px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    top: -120px;
-    left: 45px;
-    width: 56px;
-    height: 61px;
-    background-image: url("../img/icon-gift.svg");
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -52,11 +45,6 @@
     margin: 0 auto;
     padding-top: 70px;
     margin-right: 120px;
-
-    &::before {
-      top: 65px;
-      left: -330px;
-    }
   }
 }
 
@@ -78,10 +66,5 @@
   .gift__desc {
     text-align: center;
     margin: 0 auto;
-
-    &::before {
-      top: -50px;
-      left: 55px;
-    }
   }
 }

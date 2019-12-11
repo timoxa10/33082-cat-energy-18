@@ -80,6 +80,14 @@
     height: 12px;
     background-image: url("../img/icon-right-arrow-long.svg");
   }
+
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
