@@ -1,10 +1,10 @@
 .social__list {
   .reset-list();
   width: 160px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 0 auto;
 }
 
 .social__link {
@@ -13,23 +13,36 @@
   background-color: @light-grey;
 }
 
+.social__box {
+  fill: #666666;
+
+  &:hover {
+    fill: @green;
+  }
+
+  &:active {
+    fill: @green;
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .social__link {
     width: 30px;
     height: 30px;
   }
 
-  .social__link--vkontakte svg {
+  .social__box--vkontakte {
     width: 30px;
     height: 16px;
   }
 
-  .social__link--instagram svg {
+  .social__box--instagram {
     width: 23px;
     height: 23px;
   }
 
-  .social__link--facebook svg {
+  .social__box--facebook {
     width: 14px;
     height: 28px;
   }

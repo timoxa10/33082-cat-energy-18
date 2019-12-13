@@ -1,6 +1,6 @@
 .button {
   display: block;
-  .set-padding(11px; 0; 9px; 0;);
+  .set-padding(11px; 0; 10px; 0;);
   .text-options(14px; @white; 18px; uppercase; 400;);
   .reset-decoration();
   text-align: center;
@@ -9,11 +9,27 @@
 
 .button--green {
   background-color: @green;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button--grey {
   background-color: @light-grey;
   color: @dark-grey;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
