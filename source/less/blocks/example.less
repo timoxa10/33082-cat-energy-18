@@ -1,32 +1,61 @@
-.example-wrapper {
-  background-color: @light-grey;
-  padding-bottom: 30px;
+.example-wrapper__section {
+  position: relative;
+  padding-bottom: 35px;
 }
 
-.example__title {
-  margin-top: 40px;
-  margin-bottom: 20px;
+.example__calculation {
+  margin-bottom: 35px;
 }
 
 .example__intro {
-  padding-right: 20px;
+  padding-right: 10px;
   margin-bottom: 25px;
 }
 
 @media (min-width: @tablet-width) {
-  .example-wrapper {
-    background-color: @white;
-  }
-
-  .example__title {
-    margin-bottom: 60px;
+  .example-wrapper__section {
+    padding-bottom: 75px;
   }
 
   .example__calculation {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 55px;
     margin-bottom: 20px;
+  }
+
+  .example__intro {
+    padding-right: 10px;
+    margin-bottom: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example-wrapper {
+    background-image: linear-gradient(90deg, @light-grey 72.5%, #eaeaea 27.5%);
+    background-size: 100% 100%;
+    background-position: center center;
+  }
+
+  .example-wrapper__section {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+  }
+
+  .example {
+    width: 435px;
+    margin-top: 55px;
+    margin-bottom: 25px;
+  }
+
+  .example__intro {
+    padding-right: 0;
+    margin-bottom: 70px;
+  }
+
+  .example__calculation {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

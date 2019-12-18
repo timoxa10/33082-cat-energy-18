@@ -1,0 +1,101 @@
+.controls__wrapper {
+  margin-left: 40px;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls__button {
+  position: relative;
+  display: block;
+  .text-options(16px; @black; 20px; uppercase; normal;);
+}
+
+.controls__range {
+  position: relative;
+  .set-padding (3px; 0; 3px; 5px;);
+  width: 84px;
+  border-radius: 6px;
+  border: 1px solid #cdcdcd;
+  background-color: #ffffff;
+}
+
+.controls__scale {
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: @green;
+}
+
+@media (min-width: @tablet-width) {
+  .controls__wrapper {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+
+  .controls__button {
+    font-size: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 0;
+      width: 100%;
+      border: 1px dashed rgba(0, 0, 0, 0.25);
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover::after {
+      border: 1px solid rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .controls__range {
+    padding: 0;
+    border: 0;
+    width: 428px;
+  }
+
+  .controls__scale {
+    width: inherit;
+    background-color: #dcdcdc;
+  }
+
+  .controls__toggle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 14px solid @white;
+    background-color: @green;
+    box-shadow: 0 0 0 1px #cdcdcd, 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    cursor: pointer;
+    box-sizing: content-box;
+
+    &:hover {
+      box-shadow: 0 0 0 1px #cdcdcd, 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      box-shadow: 0 0 0 2px @green, 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .controls__toggle--max {
+    left: 46.5%;
+    top: -13px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .controls__wrapper {
+    margin-left: 65px;
+    margin-right: 0;
+  }
+}

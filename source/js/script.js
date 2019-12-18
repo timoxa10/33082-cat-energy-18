@@ -42,7 +42,10 @@ function initMap() {
     title: 'Cat Energy',
     icon: {
       url: 'img/map-pin.png',
-      scaledSize: new google.maps.Size(124, 106)
+      scaledSize: new google.maps.Size(113, 97)
     }
   });
 }
+
+svg4everybody();
+picturefill();

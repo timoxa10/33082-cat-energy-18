@@ -15,7 +15,7 @@
 .catalog__title-item {
   width: 100px;
   .text-options(16px; @black; 20px; uppercase; normal;);
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
@@ -34,14 +34,14 @@
   text-align: right;
 }
 
-.catalog__image {
-  width: 140px;
+.catalog__button {
+  font-size: 16px;
 }
 
 @media (max-width: @mobile-width-only) {
   .catalog__item {
     position: relative;
-    .set-padding (10px; 20px; 25px; 20px;);
+    .set-padding (0; 20px; 24px; 20px;);
     border-top: 1px solid @bordered-grey;
     margin-left: -20px;
     margin-right: -20px;
@@ -49,11 +49,17 @@
 
   .catalog__wrapper {
     display: flex;
-    margin-bottom: 25px;
+    margin-bottom: 0;
   }
 
   .catalog__link-image {
+    height: 144px;
+  }
+
+  .catalog__image {
     width: 140px;
+    height: auto;
+    margin-top: 5px;
   }
 
   .catalog__info {
@@ -76,7 +82,7 @@
 
   .catalog__item {
     width: 325px;
-    .set-padding (60px; 39px; 40px; 37px;);
+    .set-padding (60px; 39px; 42px; 37px;);
     margin-top: 0;
     margin-bottom: 60px;
     background-image: linear-gradient(to bottom, #ffffff, #ffffff 82px, #f2f2f2 82px, #f2f2f2);
@@ -96,7 +102,7 @@
     height: 185px;
     align-items: flex-end;
     justify-content: center;
-    margin-top: -40px;
+    margin-top: -33px;
   }
 
   .catalog__link-title {
@@ -105,7 +111,7 @@
 
   .catalog__title-item {
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: -8px;
     width: 130px;
     .text-options(20px; @black; 20px; uppercase; normal;);
     text-align: center;
@@ -123,25 +129,42 @@
     border-bottom: 1px solid #cdcdcd;
   }
 
-  .catalog__image {
-    width: 245px;
+  .catalog__image--small {
+    width: 324px;
+    height: 172px;
+  }
+
+  .catalog__image--large {
+    width: 324px;
+    height: 208px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .catalog__title {
+    margin-top: 45px;
+  }
+
   .catalog__list {
     padding-top: 30px;
   }
 
+  .catalog__image--small {
+    width: 245px;
+    height: 162px;
+  }
+
+  .catalog__image--large {
+    width: 245px;
+    height: 198px;
+  }
+
   .catalog__item {
     width: 245px;
+    padding-bottom: 40px;
 
     &:nth-last-child(-n+4) {
       margin: 0;
     }
-  }
-
-  .catalog__title {
-    margin-top: 40px;
   }
 }

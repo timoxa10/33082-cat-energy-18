@@ -5,7 +5,7 @@
 }
 
 .advantages__title {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .advantages__item {
@@ -19,9 +19,13 @@
   margin: 0;
 }
 
+.advantages__description br {
+  display: none;
+}
+
 .advantages__image {
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 0;
   width: 60px;
   height: 60px;
@@ -73,6 +77,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .advantages__title {
+    margin-top: 15px;
+  }
+
   .advantages-wrapper {
     padding-top: 30px;
   }
@@ -115,6 +123,10 @@
     position: absolute;
     bottom: 25px;
     z-index: 5;
+  }
+
+  .advantages__description br {
+    display: block;
   }
 }
 

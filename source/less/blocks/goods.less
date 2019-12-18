@@ -1,11 +1,11 @@
 .goods {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .goods__item {
   display: flex;
   flex-direction: column;
-  padding-bottom: 15px;
+  padding-bottom: 18px;
   border-bottom: 1px solid @bordered-grey;
 
   &:first-child {
@@ -15,7 +15,7 @@
 
 .goods__good-title {
   .text-options(16px; @light-black; 16px; uppercase; 400;);
-  margin-top: 15px;
+  margin-top: 12px;
   margin-bottom: 0;
 }
 
@@ -24,6 +24,10 @@
   justify-content: space-between;
   font-family: "Arial", "Oswald", sans-serif;
   .text-options(14px; @dark-grey; 14px; none; normal;);
+}
+
+.goods__button {
+  font-size: 16px;
 }
 
 .goods__package,
@@ -37,7 +41,8 @@
 
 @media (min-width: @tablet-width) {
   .goods {
-    margin-bottom: 68px;
+    margin-top: 82px;
+    margin-bottom: 70px;
   }
 
   .goods-container {
@@ -46,7 +51,7 @@
   }
 
   .goods__item {
-    .set-padding (10px; 36px; 28px; 37px;);
+    .set-padding (11px; 36px; 27px; 37px;);
   }
 
   .goods__row {
@@ -71,6 +76,7 @@
 
   .goods__good-title {
     .text-options(20px; @light-black; 20px; uppercase; 400;);
+    margin-top: 15px;
   }
 }
 
@@ -110,6 +116,7 @@
 
   .goods__price {
     width: 45px;
+    text-align: left;
   }
 
   .goods__button {
