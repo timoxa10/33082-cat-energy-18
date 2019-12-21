@@ -1,6 +1,15 @@
-.example-wrapper__section {
+.example-section {
   position: relative;
-  padding-bottom: 0;
+  background: @light-grey;
+}
+
+.example-section__wrapper {
+  padding-top: 8px;
+  padding-bottom: 35px;
+}
+
+.example {
+  margin-bottom: 35px;
 }
 
 .example__intro {
@@ -9,8 +18,18 @@
 }
 
 @media (min-width: @tablet-width) {
-  .example-wrapper__section {
-    padding-bottom: 70px;
+  .example-section {
+    background: none;
+  }
+
+  .example-section__wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .example__intro {
+    padding-right: 10px;
+    margin-bottom: 52px;
   }
 
   .example__calculation {
@@ -19,33 +38,27 @@
     justify-content: space-between;
     margin-bottom: 20px;
   }
-
-  .example__intro {
-    padding-right: 10px;
-    margin-bottom: 52px;
-  }
 }
 
 @media (min-width: @desktop-width) {
-  .example-wrapper {
-    background: linear-gradient(90deg, @light-grey 50%, #eaeaea 50%);
+  .example-section {
+    background: linear-gradient(90deg, @light-grey 75%, #eaeaea 25%);
   }
 
-  .example-wrapper__section {
+  .example-section__wrapper {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 25px;
   }
 
   .example {
     width: 435px;
-    margin-top: 55px;
-    margin-bottom: 25px;
+    padding-top: 55px;
+    margin-bottom: 0;
   }
 
   .example__intro {
     padding-right: 0;
-    margin-bottom: 70px;
+    margin-bottom: 68px;
   }
 
   .example__calculation {
