@@ -89,18 +89,27 @@
 .form__input {
   flex-grow: 1;
   background: @white;
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #cdcdcd;
+  border: none;
   .set-padding(13px; 0; 13px; 13px;);
   .text-options(16px; @dark-grey; 18px; uppercase; 400;);
 
   &:focus {
-    border: 2px solid @dark-grey;
-    outline: none;
+    outline: 2px solid @dark-grey;
+    outline-width: 3px;
+  }
+
+  &:focus + .form__icon {
+    fill: @green;
   }
 }
 
 .form__input--error {
-  border: 2px solid #ff8282;
+  border: 2px solid @bordered-error;
+}
+
+.form__input--error + .form__icon {
+  fill: @bordered-error;
 }
 
 .form__icon {
@@ -131,6 +140,14 @@
   height: 30px;
   border-radius: 50%;
   border: 1px solid #cdcdcd;
+}
+
+.form__radio + label:hover::before,
+.form__radio + label:active::before,
+.form__radio:checked + label:hover::after,
+.form__radio:checked + label:active::after {
+  opacity: 0.3;
+  cursor: pointer;
 }
 
 .form__radio:checked + label::after {
@@ -178,6 +195,14 @@
   background-image: url("../img//icon-tick.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.form__checkbox + label:hover::before,
+.form__checkbox + label:active::before,
+.form__checkbox:checked + label:hover::after,
+.form__checkbox:checked + label:active::after {
+  opacity: 0.3;
+  cursor: pointer;
 }
 
 .form__button {

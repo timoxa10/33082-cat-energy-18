@@ -1,31 +1,229 @@
-.slider__comparison {
-  margin-bottom: 25px;
+.slider-wrapper {
+  position: relative;
+  background: @light-grey;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.slider__draggable {
+  display: none;
+}
+
+.slider__before {
+  display: none;
+}
+
+.slider__after {
+  margin: 0 auto;
+}
+
+.slider__image {
+  width: 320px;
+  height: 240px;
+  margin: 0 auto;
+}
+
+.slider__controls {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.slider__button {
+  border: 0;
+  padding: 0;
+  background: none;
+  position: relative;
+  display: block;
+  .text-options(16px; @black; 20px; uppercase; normal;);
+}
+
+.slider__range {
+  position: relative;
+  .set-padding (3px; 0; 3px; 5px;);
+  width: 84px;
+  border-radius: 6px;
+  border: 1px solid #cdcdcd;
+  background-color: #ffffff;
+}
+
+.slider__scale {
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: @green;
 }
 
 @media (min-width: @tablet-width) {
-  .slider__comparison {
-    display: flex;
-    padding-top: 85px;
-    width: 636px;
+  .slider-wrapper {
+    background: none;
+    padding: 0;
+  }
+
+  .slider__scale {
+    display: none;
+  }
+
+  .slider {
     margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 768px;
+
+    &::after {
+      content: "";
+      width: 100vw;
+      background: linear-gradient(90deg, @light-grey 50%, #eaeaea 50%);
+      background-position: center center;
+      height: 462px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .slider__show {
+    position: relative;
+    width: 690px;
+    margin: 0 auto;
+    z-index: 10;
+  }
+
+  .slider__container {
+    width: 100%;
+    height: 628px;
+    overflow: hidden;
+  }
+
+  .slider__before,
+  .slider__after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .slider__before {
+    display: block;
+    background: #eaeaea;
+  }
+
+  .slider__after {
+    background: @light-grey;
+  }
+
+  .slider__image {
+    width: 690px;
+    height: 517px;
+    margin: 0;
+  }
+
+  .slider__draggable {
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid #cdcdcd;
+    background-color: @white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    left: 100px;
+    bottom: 8%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 5;
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: @green;
+      position: absolute;
+      border-radius: 50%;
+      left: 12px;
+      bottom: 12px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 1px #cdcdcd, 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      box-shadow: 0 0 0 2px @green, 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .slider__scrolling {
+    pointer-events: none;
+    opacity: 1;
+    z-index: 1;
   }
 
   .slider__controls {
-    margin-top: 15px;
+    width: 570px;
+    position: absolute;
+    bottom: 75px;
+    left: 60px;
+    margin: 0;
+  }
+
+  .slider__range {
+    padding: 0;
+    border: 0;
+    width: 428px;
+    height: 6px;
+    border-radius: 2.5px;
+    background-color: #dcdcdc;
+  }
+
+  .slider__button {
+    font-size: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 0;
+      width: 100%;
+      border: 1px dashed rgba(0, 0, 0, 0.25);
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover::after {
+      border: 1px solid rgba(0, 0, 0, 0.4);
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .slider {
-    width: 636px;
+    position: absolute;
+    right: 60px;
+    bottom: 0;
+    padding: 0;
+    width: 690px;
+
+    &::after {
+      display: none;
+    }
   }
 
-  .slider__comparison {
-    margin-top: -175px;
-    padding-top: 0;
+  .slider__container {
+    height: 642px;
   }
 
   .slider__controls {
-    margin-top: 32px;
+    left: 80px;
   }
 }
