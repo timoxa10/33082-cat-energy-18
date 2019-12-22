@@ -26,7 +26,8 @@
 }
 
 .form__row-default {
-  padding-bottom: 13px;
+  position: relative;
+  padding-bottom: 12px;
 
   &:last-child {
     padding-bottom: 0;
@@ -69,7 +70,7 @@
 }
 
 .form__label--info {
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .form__label--indented,
@@ -88,9 +89,39 @@
 .form__input {
   flex-grow: 1;
   background: @white;
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #cdcdcd;
+  border: none;
   .set-padding(13px; 0; 13px; 13px;);
   .text-options(16px; @dark-grey; 18px; uppercase; 400;);
+
+  &:focus {
+    outline: 2px solid @dark-grey;
+    outline-width: 3px;
+  }
+
+  &:focus + .form__icon {
+    fill: @green;
+  }
+}
+
+.form__input--error {
+  border: 2px solid @bordered-error;
+}
+
+.form__input--error + .form__icon {
+  fill: @bordered-error;
+}
+
+.form__icon {
+  position: absolute;
+}
+
+.form__icon--email {
+  right: 15px;
+}
+
+.form__icon--phone {
+  right: 10px;
 }
 
 .form__container--radio {
@@ -111,6 +142,14 @@
   border: 1px solid #cdcdcd;
 }
 
+.form__radio + label:hover::before,
+.form__radio + label:active::before,
+.form__radio:checked + label:hover::after,
+.form__radio:checked + label:active::after {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
 .form__radio:checked + label::after {
   content: "";
   position: absolute;
@@ -129,6 +168,11 @@
   border: 1px solid #cdcdcd;
   .set-padding(12px; 0; 0; 15px;);
   .text-options(16px; @dark-grey; 18px; uppercase; 400;);
+
+  &:focus {
+    border: 2px solid @dark-grey;
+    outline: none;
+  }
 }
 
 .form__checkbox + label::before {
@@ -153,10 +197,19 @@
   background-position: 0 0;
 }
 
+.form__checkbox + label:hover::before,
+.form__checkbox + label:active::before,
+.form__checkbox:checked + label:hover::after,
+.form__checkbox:checked + label:active::after {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
 .form__button {
   border: none;
   width: 100%;
   margin-bottom: 22px;
+  font-size: 16px;
 }
 
 .form__info {
@@ -315,11 +368,27 @@
     font-size: 16px;
     text-align: left;
   }
+
+  .form__label--email {
+    margin-right: 22px;
+  }
+
+  .form__label--phone {
+    margin-right: 15px;
+  }
+
+  .form__icon--email {
+    right: 18px;
+  }
+
+  .form__icon--phone {
+    right: 15px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .form {
-    padding-top: 25px;
+    padding-top: 30px;
     padding-bottom: 82px;
   }
 

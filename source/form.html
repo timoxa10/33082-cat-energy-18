@@ -79,14 +79,14 @@
             <h3 class="form__title-row title-small title-small--stroked">Контактные данные (владельца кота)</h3>
             <div class="form__wrapper-grid">
               <div class="form__row-default form__row-grid form__row-email">
-                <label for="user-email" class="form__label form__label--info">E-mail:*</label>
+                <label for="user-email" class="form__label form__label--info form__label--email">E-mail:*</label>
                 <input class="form__input" type="email" name="user-email" placeholder="kuklachev@gmail.com" required id="user-email">
                 <svg class="form__icon form__icon--email" width="18" height="14">
                   <use xlink:href="img/sprite.svg#icon-email"></use>
                 </svg>
               </div>
               <div class="form__row-default form__row-grid form__row-phone">
-                <label for="user-phone" class="form__label form__label--info">Телефон:*</label>
+                <label for="user-phone" class="form__label form__label--info form__label--phone">Телефон:*</label>
                 <input class="form__input" type="tel" name="user-phone" placeholder="8 (960) 900-60-90" required id="user-phone">
                 <svg class="form__icon form__icon--phone" width="21" height="21">
                   <use xlink:href="img/sprite.svg#icon-phone"></use>
@@ -130,14 +130,15 @@
       <section class="contacts contacts--grey">
         <div class="contacts__wrapper content-wrapper">
           <h3 class="contacts__title">
-            Приглашаем к сотрудничеству дилеров!
+            Приглашаем к&nbsp;сотрудничеству дилеров!
           </h3>
           <p class="contacts__description">
-            ул. Большая Конюшенная, д. 19/8
-            Санкт-Петербург
+            <b class="contacts__address">ул. Большая Конюшенная, д. 19/8</b>
+            <b class="contacts__address">Санкт-Петербург</b>
           </p>
         </div>
       </section>
+      <section class="map"></section>
     </main>
     <footer class="page-footer">
       <div class="page-footer-wrapper content-wrapper">
@@ -175,6 +176,9 @@
         </div>
       </div>
     </footer>
+    <script src="js/svg4everybody.min.js"></script>
+    <script src="js/picturefill.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYn0GvO9nO9W6Sw7-gnyKLQLBbnOuqjJc&callback=initMap"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

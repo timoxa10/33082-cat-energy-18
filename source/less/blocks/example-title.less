@@ -1,0 +1,25 @@
+.example-title {
+  background-color: @light-grey;
+}
+
+.example-title__title {
+  margin-top: 37px;
+  margin-bottom: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .example-title {
+    background-color: @white;
+  }
+
+  .example-title__title {
+    margin-top: 38px;
+    margin-bottom: 65px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example-title__title {
+    margin-bottom: 75px;
+  }
+}

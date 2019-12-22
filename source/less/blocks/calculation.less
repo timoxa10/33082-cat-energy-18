@@ -15,7 +15,7 @@
 .calculation__result {
   display: block;
   background: none;
-  .text-options(24px; @black; 24px; uppercase; 500;);
+  .text-options(24px; @black; 24px; uppercase; 400;);
   padding-bottom: 8px;
 }
 
@@ -32,11 +32,7 @@
 .calculation__amount {
   .text-options(14px; @black; 20px; uppercase; 300;);
   text-align: center;
-  margin-top: 35px;
-}
-
-.calculation__amount br {
-  display: none;
+  margin-top: 32px;
 }
 
 @media (min-width: @tablet-width) {
@@ -50,7 +46,7 @@
 
   .calculation__result {
     background: none;
-    .text-options(30px; @black; 37px; uppercase; 500;);
+    .text-options(30px; @black; 37px; uppercase; 400;);
     padding-bottom: 8px;
   }
 
@@ -77,10 +73,37 @@
   .calculation__amount {
     .text-options(20px; @black; 20px; uppercase; 300;);
     text-align: right;
-    margin: 0;
+    margin-top: 0;
   }
 
-  .calculation__amount br {
+  .calculation__bold-text {
     display: block;
+
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .calculation__wrapper {
+    margin-bottom: 60px;
+  }
+
+  .calculation__goal {
+    background: @light-grey;
+  }
+
+  .calculation__amount {
+    text-align: left;
+  }
+
+  .calculation__bold-text {
+    display: inline-block;
+
+    &:first-child {
+      margin-right: 60px;
+      margin-bottom: 0;
+    }
   }
 }
