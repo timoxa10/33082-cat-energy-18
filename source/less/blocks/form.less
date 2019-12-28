@@ -27,7 +27,7 @@
 
 .form__row-default {
   position: relative;
-  padding-bottom: 12px;
+  padding-bottom: 15px;
 
   &:last-child {
     padding-bottom: 0;
@@ -83,7 +83,7 @@
 }
 
 .form__container--checkbox {
-  padding-bottom: 42px;
+  padding-bottom: 40px;
 }
 
 .form__input {
@@ -129,7 +129,7 @@
 .form__container--radio {
   border-top: 1px solid @bordered-grey;
   border-bottom: 1px solid @bordered-grey;
-  padding-top: 25px;
+  padding-top: 28px;
   padding-bottom: 28px;
 }
 
@@ -222,6 +222,10 @@
   text-align: center;
 }
 
+.form__container--contacts {
+  margin-top: 26px;
+}
+
 @media (min-width: @tablet-width) {
   .form {
     padding-top: 15px;
@@ -229,7 +233,7 @@
   }
 
   .form__wrapper {
-    padding-top: 45px;
+    padding-top: 48px;
     padding-left: 40px;
     padding-right: 37px;
   }
@@ -239,6 +243,7 @@
   }
 
   .form__container--contacts {
+    margin-top: 0;
     padding-bottom: 30px;
   }
 
@@ -271,7 +276,7 @@
   }
 
   .form__row-default {
-    padding-bottom: 20px;
+    padding-bottom: 22px;
   }
 
   .form__row-radio {
@@ -331,7 +336,7 @@
   }
 
   .form__label--data {
-    margin-right: 18px;
+    margin-right: 20px;
   }
 
   .form__container--radio {
@@ -455,5 +460,9 @@
 
   .form__icon--email {
     bottom: 20px;
+  }
+
+  .form__title-row {
+    margin-left: 40px;
   }
 }

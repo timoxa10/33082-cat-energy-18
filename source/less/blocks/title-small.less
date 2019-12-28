@@ -2,9 +2,70 @@
   .text-options(24px; @black; 24px; none; 400;);
 }
 
+.title-small--stroked {
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-top: 3px solid @green;
+    top: 58%;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 105%;
+  }
+}
+
+.stroked {
+  background: @white;
+  padding-right: 20px;
+}
+
 @media (min-width: @tablet-width) {
   .title-small {
     position: relative;
     .text-options(36px; @black; 36px; none; 400;);
+  }
+
+  .title-small--stroked {
+    &::before {
+      content: "";
+      position: absolute;
+      border-top: 3px solid @green;
+      top: 58%;
+      z-index: -1;
+      bottom: 0;
+      left: -70px;
+      width: 5%;
+    }
+
+    &::after {
+      width: 110.5%;
+    }
+  }
+
+  .title-small--additional {
+    &::after {
+      width: 104.5%;
+    }
+  }
+
+  .stroked {
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .title-small--stroked {
+    &::before {
+      left: -80px;
+      width: 3.5%;
+    }
+
+    &::after {
+      width: 103.5%;
+    }
   }
 }
