@@ -27,7 +27,7 @@
 
 .form__row-default {
   position: relative;
-  padding-bottom: 12px;
+  padding-bottom: 15px;
 
   &:last-child {
     padding-bottom: 0;
@@ -96,7 +96,7 @@
 
   &:focus {
     outline: 2px solid @dark-grey;
-    outline-width: 3px;
+    outline-width: 2px;
   }
 
   &:focus + .form__icon {
@@ -118,17 +118,34 @@
 
 .form__icon--email {
   right: 15px;
+  bottom: 30px;
 }
 
 .form__icon--phone {
-  right: 10px;
+  right: 12px;
+  bottom: 13px;
 }
 
 .form__container--radio {
-  border-top: 1px solid @bordered-grey;
-  border-bottom: 1px solid @bordered-grey;
-  padding-top: 25px;
+  padding-top: 28px;
   padding-bottom: 28px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    border-bottom: 1px solid @bordered-grey;
+    left: 0;
+  }
+
+  &::before {
+    top: 430px;
+  }
+
+  &::after {
+    top: 585px;
+  }
 }
 
 .form__radio + label::before {
@@ -165,13 +182,14 @@
   width: 100%;
   height: 150px;
   background: @white;
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #cdcdcd;
+  border: 0;
   .set-padding(12px; 0; 0; 15px;);
   .text-options(16px; @dark-grey; 18px; uppercase; 400;);
 
   &:focus {
-    border: 2px solid @dark-grey;
-    outline: none;
+    outline: 2px solid @dark-grey;
+    outline-width: 2px;
   }
 }
 
@@ -219,6 +237,10 @@
   text-align: center;
 }
 
+.form__container--contacts {
+  margin-top: 26px;
+}
+
 @media (min-width: @tablet-width) {
   .form {
     padding-top: 15px;
@@ -226,7 +248,7 @@
   }
 
   .form__wrapper {
-    padding-top: 45px;
+    padding-top: 48px;
     padding-left: 40px;
     padding-right: 37px;
   }
@@ -236,6 +258,7 @@
   }
 
   .form__container--contacts {
+    margin-top: 0;
     padding-bottom: 30px;
   }
 
@@ -268,7 +291,7 @@
   }
 
   .form__row-default {
-    padding-bottom: 20px;
+    padding-bottom: 22px;
   }
 
   .form__row-radio {
@@ -328,7 +351,7 @@
   }
 
   .form__label--data {
-    margin-right: 18px;
+    margin-right: 20px;
   }
 
   .form__container--radio {
@@ -336,6 +359,11 @@
     padding-top: 30px;
     padding-bottom: 35px;
     margin-bottom: 75px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   .form__textarea {
@@ -379,10 +407,12 @@
 
   .form__icon--email {
     right: 18px;
+    bottom: 40px;
   }
 
   .form__icon--phone {
     right: 15px;
+    bottom: 15px;
   }
 }
 
@@ -446,5 +476,19 @@
   .form__info {
     width: 245px;
     margin-right: auto;
+  }
+
+  .form__title-row {
+    margin-left: 40px;
+  }
+
+  .form__icon--email {
+    right: 20px;
+    bottom: 15px;
+  }
+
+  .form__icon--phone {
+    right: 15px;
+    bottom: 10px;
   }
 }

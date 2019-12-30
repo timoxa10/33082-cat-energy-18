@@ -70,9 +70,9 @@ document.body.addEventListener('mousemove',function(e){
 });
 
 function scrollIt(x){
-    var transform = Math.max(0,(Math.min(x,document.querySelector('.slider__container').offsetWidth)));
-    document.querySelector('.slider__after').style.width = transform+"px";
-    document.querySelector('.slider__draggable').style.left = transform-18+"px";
+  var transform = Math.max(0,(Math.min(x,document.querySelector('.slider__container').offsetWidth)));
+  document.querySelector('.slider__after').style.width = transform+"px";
+  document.querySelector('.slider__draggable').style.left = transform-18+"px";
 }
 
 scrollIt(345);
