@@ -83,7 +83,7 @@
 }
 
 .form__container--checkbox {
-  padding-bottom: 40px;
+  padding-bottom: 42px;
 }
 
 .form__input {
@@ -127,10 +127,25 @@
 }
 
 .form__container--radio {
-  border-top: 1px solid @bordered-grey;
-  border-bottom: 1px solid @bordered-grey;
   padding-top: 28px;
   padding-bottom: 28px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    border-bottom: 1px solid @bordered-grey;
+    left: 0;
+  }
+
+  &::before {
+    bottom: 42%;
+  }
+
+  &::after {
+    bottom: 20.5%;
+  }
 }
 
 .form__radio + label::before {
@@ -344,6 +359,11 @@
     padding-top: 30px;
     padding-bottom: 35px;
     margin-bottom: 75px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   .form__textarea {
