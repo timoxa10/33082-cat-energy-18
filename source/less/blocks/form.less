@@ -79,7 +79,7 @@
 }
 
 .form__container--data {
-  padding-bottom: 22px;
+  padding-bottom: 27px;
 }
 
 .form__container--checkbox {
@@ -127,7 +127,7 @@
 }
 
 .form__container--radio {
-  padding-top: 28px;
+  padding-top: 23px;
   padding-bottom: 28px;
 
   &::before,
@@ -232,7 +232,7 @@
 
 .form__info {
   display: block;
-  font-family: "Arial", "Oswald", sans-serif;
+  font-family: "Arial", sans-serif;
   .text-options(14px; @dark-grey; 16px; none; 400;);
   text-align: center;
 }
@@ -267,7 +267,7 @@
   }
 
   .form__container--checkbox {
-    padding-bottom: 13px;
+    padding-bottom: 12px;
   }
 
   .form__label--indented {
@@ -344,6 +344,7 @@
   .form__input {
     .set-padding(10px; 0; 10px; 17px;);
     .text-options(20px; @dark-grey; 20px; uppercase; 400;);
+    min-height: 50px;
   }
 
   .form__label {
@@ -367,7 +368,7 @@
   }
 
   .form__textarea {
-    height: 175px;
+    min-height: 175px;
     .set-padding(17px; 0; 0; 20px;);
     .text-options(20px; @dark-grey; 20px; uppercase; 400;);
   }
@@ -442,6 +443,7 @@
   }
 
   .form__container--radio {
+    padding-top: 33px;
     margin-bottom: 0;
   }
 
@@ -479,7 +481,12 @@
   }
 
   .form__title-row {
+    margin-bottom: 80px;
     margin-left: 40px;
+  }
+
+  .form__title-row--checkbox {
+    margin-bottom: 70px;
   }
 
   .form__icon--email {
@@ -488,7 +495,7 @@
   }
 
   .form__icon--phone {
-    right: 15px;
-    bottom: 10px;
+    right: 17px;
+    bottom: 13px;
   }
 }

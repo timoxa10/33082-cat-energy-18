@@ -1,0 +1,29 @@
+@media (max-width: @mobile-width-only) {
+  .title-stroked--doubled {
+    max-width: 225px;
+    display: inline-block;
+  }
+}
+
+.title-stroked {
+  background: @white;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: -20px;
+}
+
+@media (min-width: @tablet-width) {
+  .title-stroked {
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-left: -40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .title-stroked {
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-left: -80px;
+  }
+}
