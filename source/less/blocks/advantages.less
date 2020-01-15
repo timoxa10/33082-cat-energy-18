@@ -154,14 +154,23 @@
     padding-top: 30px;
   }
 
-  .advantages__list::after {
-    display: none;
+  .advantages__list {
+    justify-content: flex-start;
+
+    &::after {
+      display: none;
+    }
   }
 
   .advantages__item {
     width: 245px;
     min-height: 250px;
+    margin-right: 80px;
     margin-bottom: 40px;
+  }
+
+  .advantages__item:nth-child(4n+4) {
+    margin-right: 0;
   }
 
   .advantages__image {

@@ -1,16 +1,21 @@
 .social__list {
   .reset-list();
-  width: 160px;
+  width: 140px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .social__link {
   width: 25px;
   height: 20px;
+  margin-right: 30px;
   background-color: @light-grey;
+}
+
+.social__item:nth-child(3n+3) .social__link {
+  margin-right: 0;
 }
 
 .social__box {
@@ -27,13 +32,10 @@
 }
 
 @media (min-width: @tablet-width) {
-  .social__list {
-    width: 150px;
-  }
-
   .social__link {
     width: 30px;
     height: 30px;
+    margin-right: 23px;
   }
 
   .social__box--vkontakte {
